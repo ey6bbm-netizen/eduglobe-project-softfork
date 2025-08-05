@@ -11,7 +11,7 @@ export default async function handler(req: Request) {
   }
 
   try {
-    const { messages, language } = await req.json();
+    const { messages, language } = req.body;
 
     if (!Array.isArray(messages) || !language) {
       return new Response(JSON.stringify({ error: 'Missing messages or language' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
