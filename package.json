@@ -1,0 +1,8 @@
+{
+  "name": "eduglobe-ai",
+  "version": "1.0.0",
+  "description": "AI Math Tutor",
+  "dependencies": {
+    "@google/genai": "^1.10.0"
+  }
+}
