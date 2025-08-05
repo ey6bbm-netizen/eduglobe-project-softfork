@@ -1,5 +1,5 @@
 
-import { GoogleGenAI } from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import { SYSTEM_PROMPTS, Language, Role } from './constants.server.js';
 
 // Use the Node.js runtime
@@ -17,7 +17,7 @@ export default async function handler(req: Request) {
       return new Response(JSON.stringify({ error: 'Missing messages or language' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
     }
 
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+    const ai = new GoogleGenerativeAI({ apiKey: process.env.API_KEY! });
     const systemInstruction = SYSTEM_PROMPTS[language as Language];
     
     const contents = messages.map((msg: Message) => ({
