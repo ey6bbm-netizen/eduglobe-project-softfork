@@ -1,6 +1,6 @@
 
 import { GoogleGenAI } from "@google/generative-ai";
-import { SYSTEM_PROMPTS } from '../constants';
+import { SYSTEM_PROMPTS } from '../constants.ts';
 import { Language, Message, Role } from '../types';
 
 // Use the Node.js runtime
